@@ -1,0 +1,10 @@
+{
+  "name": "projeto",
+  "displayName": "projeto",
+  "icon": "/assets/img/icon.png",
+  "splash": {
+    "image": "./assets/img/splash.png",
+    "resizeMode": "cover",
+    "backgroundColor": "#000"
+  }
+}
