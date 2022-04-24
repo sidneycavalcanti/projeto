@@ -25,5 +25,36 @@ const css = StyleSheet.create({
   button: {
     margin: 30,
   },
+  inputView: {
+    backgroundColor: "#FFC0CB",
+    width: "80%",
+    borderRadius: 25,
+    height: 50,
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: 40,
+  },
+  TextInput: {
+    height: 50,
+    flex: 1,
+    padding: 10,
+    marginLeft: 20,
+  },
+  loginBtn: {
+    width: "80%",
+    borderRadius: 25,
+    height: 50,
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: 40,
+    backgroundColor: "#FF1493",
+  },
+  login_msg: (text='none') => ({
+    fontWeight: "bold",
+    fontSize: 22,
+    color: "red",
+    marginTop: 10,
+    display: text
+  }),
 });
 export {css};
