@@ -3,6 +3,7 @@ import { Divider, Input } from '@rneui/base';
 import React, {useState} from 'react';
 import {View, Text, Image, TextInput, TouchableOpacity} from 'react-native';
 import {css} from '../assets/css/Css';
+import AsyncStorage from '@react-native-community/async-storage';
 
 export default function Login() {
 
@@ -25,12 +26,17 @@ export default function Login() {
         password: password,
       })
     });
-    let json= await response.json();
+    let json = await response.json();
     if(json === 'error'){
       setDisplay('flex');
       setTimeout(()=>{
         setDisplay('none');
       },5000);
+      //await AsyncStorege.clear();
+    }else{
+      let userData=await AsyncStorage.setItem('userData', JSON.stringify(json));
+      let resData=await AsyncStorage.getItem('usarData');
+      console.log(JSON.parse(resData));
     }
   }
 

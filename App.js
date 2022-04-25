@@ -4,10 +4,17 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {Home, Login, Rastreio} from './views';
 import {css} from './assets/css/Css';
+import AsyncStorage from '@react-native-community/async-storage';
 
 export default function App() {
 
   const Stack = createNativeStackNavigator();
+
+  async function teste(){
+    let resData=await AsyncStorage.getItem('usarData');
+      console.log(JSON.parse(resData));
+  }
+  teste();
 
   return (
     <NavigationContainer>
